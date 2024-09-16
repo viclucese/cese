@@ -1,0 +1,99 @@
+
+h1, h2 {    
+    font-family: "Lucida Console", Courier, monospace;
+    color: gray;
+  }
+
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.content {
+    flex: 1; /* Para que este contenido ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Contenedor del iframe */
+.iframe-container {
+    width: 66vh; 
+    height: 40vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos del iframe */
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene una relación de aspecto 16:9 */
+    border: none;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .iframe-container {
+        width: 90vw; 
+        height: auto;
+    }
+    footer {
+        font-size: 1.2rem; /* Tamaño de texto más grande en pantallas pequeñas */
+    }
+}
+
+/* Footer */
+footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #2C3E50; /* Fondo oscuro */
+    color: #FFF; /* Texto blanco */
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem; /* Tamaño de fuente más grande para mayor legibilidad */
+    line-height: 2; /* El texto ocupará más espacio verticalmente */
+    box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el texto */
+    align-items: center; /* Centra verticalmente el texto */
+}
+
+/* Estilo general del enlace */
+a.gradient-link {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #FFF; /* Texto blanco por defecto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    padding: 10px 20px; /* Espaciado dentro del enlace */
+    font-size: 1rem; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    position: relative; /* Posiciona el pseudo-elemento */
+    display: inline-flex; /* Usa flexbox para centrar el texto */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+}
+
+/* Efecto hover */
+a.gradient-link:hover {
+    color: #FFF; /* Texto blanco para asegurar legibilidad */
+    background: linear-gradient(45deg, #FF6347, #FFD700, #32CD32, #1E90FF); /* Gradiente de fondo */
+    background-size: 400% 400%; /* Tamaño del gradiente */
+    animation: gradientAnimation 4s ease infinite; /* Animación de cambio de gradiente */
+}
+
+/* Animación del gradiente */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
