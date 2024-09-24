@@ -1,11 +1,12 @@
 
 h1, h2 {    
-    font-family: "Lucida Console", Courier, monospace;
+    
     color: gray;
   }
 
 /* Estilos generales */
 body, html {
+    font-family: "Lucida Console", Courier, monospace;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -96,4 +97,70 @@ a.gradient-link:hover {
     0% { background-position: 0% 0%; }
     50% { background-position: 100% 100%; }
     100% { background-position: 0% 0%; }
+}
+
+
+/* Barra de navegación básica */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+/* Alineación a la derecha */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+/* Estilos de los enlaces principales */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Estilo del submenú desplegable */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px 0;
+    margin-top: 0;
+    border-radius: 5px;
+    list-style-type: none;
+    right: 0;
+    min-width: 150px; /* Ajusta el ancho mínimo si es necesario */
+    z-index: 1000; /* Asegura que el submenú esté por encima de otros elementos */
+}
+
+/* Mostrar el submenú al pasar el cursor sobre el elemento padre */
+nav ul li:hover ul {
+    display: block;
+}
+
+/* Estilos para los elementos del submenú */
+nav ul li ul li {
+    margin: 0;
+}
+
+nav ul li ul li a {
+    white-space: nowrap;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+    background-color: #575757;
 }
